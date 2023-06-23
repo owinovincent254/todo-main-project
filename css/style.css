@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  background-image: url("../../images/bg-desktop-light.jpg");
+  height: 40vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hero__details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40%;
+  padding-top: 7em;
+}
+.hero__details form {
+  width: 100%;
+}
+.hero__details form input[type=submit] {
+  display: none;
+  margin: 0 auto;
+}
+.hero__details__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 40%;
+  color: white;
+  font-size: 2rem;
+}
+.hero__details__form {
+  margin: 0 auto;
+  background-color: white;
+  width: 40%;
+  padding: 1.5em;
+  border-radius: 5px;
+}
+.hero__details__form input[type=text] {
+  width: 98%;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+.hero__details__form .radio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
+}
+.hero__details__form .empty {
+  border-radius: 60%;
+  gap: 1em;
+  height: 20px;
+  width: 20px;
+  border: 1px solid grey;
+}
+.hero__details ul li {
+  list-style-type: none;
+}
+.hero__details ul:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  border-radius: 5px;
+}
+.hero__details ul:last-child li {
+  list-style-type: none;
+  padding: 1.5em 0;
+}
+.hero__details ul .center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
+}
+.hero__details__content {
+  background-color: white;
+  width: 40%;
+  box-shadow: 2px 2px 2px 2px grey;
+  border: 5px;
+  margin-top: 2em;
+  width: 40%;
+  border-radius: 5px;
+}
+.hero__details .li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5em;
+  padding: 1.5em;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+.hero__details .li img {
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+  display: none;
+}
+.hero__details .li:hover img {
+  display: block;
+}
+.hero__details .span {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  border: 1px solid grey;
+  display: block;
+}
+.hero__details .checked {
+  background: url("../../images/icon-check.svg") no-repeat center center, linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.hero__details .checked ~ span {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.footer {
+  margin-top: 30em;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: row;
+}
+.footer p {
+  text-align: center;
+}

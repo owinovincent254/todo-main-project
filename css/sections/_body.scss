@@ -1,0 +1,143 @@
+@use "../utilities/mixins" as *;
+.hero {
+  background-image: url("../../images/bg-desktop-light.jpg");
+  height: 40vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__details {
+    @include flex(center, center, column);
+    gap: 40%;
+    padding-top: 7em;
+    form{
+        
+        width: 100%;
+        input[type="submit"]{
+            display: none;
+            margin: 0 auto;
+            
+          }
+    }
+    &__title {
+      @include flex(space-between, center);
+      width: 40%;
+      color: white;
+      font-size: 2rem;
+    }
+    &__form {
+      margin: 0 auto;
+      background-color: white;
+      width: 40%;
+      padding: 1.5em;
+      border-radius: 5px;
+
+      
+      input[type="text"] {
+        width: 98%;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+      }
+
+      
+      .radio {
+        @include flex(space-between, center);
+        gap: 1em;
+      }
+
+      .empty {
+        border-radius: 60%;
+        gap: 1em;
+        height: 20px;
+        width: 20px;
+        border: 1px solid grey;
+        
+      }
+
+    
+    }
+    ul {
+        li{
+            list-style-type: none;
+        }
+
+        &:last-child{
+
+            @include flex(space-between, center);
+
+            width: 100%;
+            border-radius: 5px;
+            li {
+              list-style-type: none;
+              padding: 1.5em 0;
+            }
+        }
+
+      .center {
+        @include flex(space-between, center);
+        gap: 1em;
+      }
+    }
+
+    &__content{
+        background-color: white;
+        width: 40%;
+        // padding:1em ;
+        box-shadow:2px 2px 2px 2px grey ;
+        border: 5px;
+        margin-top: 2em;
+        width: 40%;
+        border-radius: 5px;
+        
+    }
+    .li{
+        @include flex(flex-start,center);
+        gap:.5em;
+        padding: 1.5em;
+        border-bottom:1px solid gray;
+        width: 100%;
+        border-radius: 5px;
+        position: relative;
+
+        img{
+          position:absolute;
+          right: 5px;
+          cursor: pointer;
+          display: none;
+        }
+
+        cursor: pointer;
+         &:hover{
+          img{
+            display: block;
+          }
+        }
+        
+    }
+    .span{
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        border: 1px solid grey;
+        display: block;
+    
+    }
+    .checked{
+        background:url('../../images/icon-check.svg' )no-repeat center center,linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+    }
+    .checked~span{
+        color: grey;
+        text-decoration: line-through;
+    }
+
+  }
+}
+.footer {
+  margin-top: 30em;
+  @include flex(center, baseline);
+
+  p {
+    text-align: center;
+  }
+}
